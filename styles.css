@@ -1,0 +1,99 @@
+.bookCard {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+    justify-content:flex-start;
+    min-height: max-content;
+    padding: 20px;
+    margin: 20px;
+}
+
+.bookCard:hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+  }
+
+  .container {
+    padding: 2px 16px;
+  }
+  
+  .navbar-container {
+    display: flex;
+    justify-content: end;
+    min-height: max-content;
+    box-shadow: black;
+    background-color: lightgrey;
+  }
+
+  .btn-add {
+    display: flex;
+    justify-content: center;
+    margin-top: 25px;
+    margin-bottom: 10px;
+  }
+
+  .btn-remove:hover {
+    background-color: rgb(195, 31, 31);
+  }
+
+  .btn-read {
+    margin-right: 30px;
+  }
+
+  .readRemoveBtns {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  
+  .popup .overlay {
+    position:fixed;
+    top:0px;
+    left:0px;
+    width:100vw;
+    height:100vh;
+    background:rgba(0,0,0,0.7);
+    z-index:1;
+    display:none;
+  }
+  
+  .popup .content {
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%) scale(0);
+    background:#fff;
+    width:500px;
+    height:250px;
+    z-index:2;
+    text-align:center;
+    padding:20px;
+    box-sizing:border-box;
+    font-family:"Open Sans",sans-serif;
+  }
+  
+  .popup .close-btn {
+    cursor:pointer;
+    position:absolute;
+    right:20px;
+    top:20px;
+    width:30px;
+    height:30px;
+    background:#222;
+    color:#fff;
+    font-size:25px;
+    font-weight:600;
+    line-height:30px;
+    text-align:center;
+    border-radius:50%;
+  }
+  
+  .popup.active .overlay {
+    display:block;
+  }
+  
+  .popup.active .content {
+    transition:all 300ms ease-in-out;
+    transform:translate(-50%,-50%) scale(1);
+  }

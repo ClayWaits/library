@@ -3,17 +3,54 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="script.js"></script>
+    <script defer src="script.js"></script>
     <link rel="stylesheet" href="styles.css">
     <title>Library Project</title>
 </head>
 <body>
-    <header>Library</header>
-    <div class="Info">This is a library project for The Odin Project, where you can keep track of the books you have read. View the code on github here: (placeholder link)</div>
+    <header>
+        <div class="navbar-container">
+            <nav class="navbar navbar-expand-lg navbar-light bg-light">
+              <nav class="navbar-brand" href="#">Library Project</a>
+            </nav>
+          </div>
+    </header>
     <main>
-        
+      <div class="btn-add">
+      <button onclick="togglePopup()" class="btn-add" id="addBookBtn">+ Add book</button>
+      </div>
+        <div class="bookCard" style="width: 30rem;">
+            <div class="card-body">
+              <h5 class="bookCardTitle">Book title</h5>
+              <p class="bookCardAuthor">Author </p>
+              <p class="bookCardPages">Pages </p>
+              <div class="readRemoveBtns">
+              <button class="btn-read">Read</a>
+              <button class="btn-remove">Remove book</button>
+              </div>
+            </div>
+          </div>
+          <div class="popup" id="popup-1">
+            <div onclick="togglePopup()" class="overlay"></div>
+            <div class="content">
+              <div class="close-btn" onclick="togglePopup()">&times;</div>
+              <h1>Add a book</h1>
+              <form class="add-book-form" id="addBookForm">
+                <input type="text" id="bookTitleInput" placeholder="Title">
+                <input type="text" id="authorInput" placeholder="Author">
+                <input type="text" id="pageInput" placeholder="# of pages">
+                <input type="checkbox" name="" id="readCheck">
+                <button type="submit" onclick="addBookToLibrary()">Submit</button>
+              </form>
+            </div>
+          </div>
     </main>
-    <footer></footer>
+    <footer>
+      
+    </footer>
 </body>
 </html>
